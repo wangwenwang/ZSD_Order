@@ -1,0 +1,170 @@
+//
+//  Order-Prefix.pch
+//  Order
+//
+//  Created by 凯东源 on 16/9/26.
+//  Copyright © 2016年 凯东源. All rights reserved.
+//
+
+#ifndef Order_Prefix_pch
+#define Order_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Order_Prefix_pch */
+
+/*--------- import ---------*/
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>
+
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>//引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>//引入地图功能所有的头文件
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>//引入检索功能所有的头文件
+#import <BaiduMapAPI_Cloud/BMKCloudSearchComponent.h>//引入云检索功能所有的头文件
+#import <BaiduMapAPI_Location/BMKLocationComponent.h>//引入定位功能所有的头文件
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>//引入计算工具所有的头文件
+#import <BaiduMapAPI_Radar/BMKRadarComponent.h>//引入周边雷达功能所有的头文件
+#import <BaiduMapAPI_Map/BMKMapView.h>//只引入所需的单个头文件
+
+/*--------- 主题色 ---------*/
+#define ZSDColor [UIColor colorWithRed:0 / 255.0 green:104 / 255.0 blue:184 / 255.0 alpha:1]
+
+/*--------- 颜色RGB ---------*/
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+
+/*--------- NSUserDefaults ---------*/
+// 服务器地址用户名
+#define udUserName @"userName"
+// 服务器地址用户密码
+#define udPassWord @"passWord"
+
+/*--------- 全局变量 ---------*/
+
+#define CheckOrderViewControllerMenuHeight 44
+
+#define mTagGetCustomerChartDataList @"mTagGetCustomerChartDataList"
+
+#define mTagGetProductChartDataList @"mTagGetProductChartDataList"
+
+/// 固定值
+#define kENT_IDX 9018
+
+/// 商品为正常商品类型
+#define kPRODUCT_TYPE_NORMAL @"NR"
+
+
+/*--------- 通知 ---------*/
+#define kConfirmOrderViewControllerRefreshGifts @"ConfirmOrderViewControllerRefreshGifts"
+
+/// WMPageController由滑动停留在VC，由点击标题停留在VC不通知
+#define kWMPageController_ScrollViewDidEndDecelerating @"WMPageController_ScrollViewDidEndDecelerating"
+
+
+/*--------- 角色划分 ---------*/
+#define kPARTY      @"PARTY"        // 客户　　　　   　下单权限
+#define kBUSINESS   @"BUSINESS"     // 业务　　　　   　下单权限
+#define kORDER      @"ORDER"        // 订单员　　   　　下单权限
+#define kMANAGER    @"MANAGER"      // 经理　　　　　　　第一次审核权限
+#define kADMIN      @"ADMIN"        // 管理员　　　　　　第二次审核权限
+#define kALL        @"ALL"          // 超级管理员　　　　拥有所有权限
+
+
+/*--------- API ---------*/
+
+/// 服务器地址
+#define API_ServerAddress @"http://119.29.97.207:8056"
+
+/// 图片文件夹
+#define kGetAutographDir @"Uploadfile"
+
+/// 登陆接口
+#define API_LOGIN API_ServerAddress @"/api/Login"
+
+/// 获取在途订单列表
+#define API_GET_ORDER_LIST @"http://119.29.97.207:8056/api/GetOrderList"
+
+/// 获取用户业务类型
+#define API_GET_BUISNESS_LIST @"http://119.29.97.207:8056/api/GetBuisnessList"
+
+/// 获取用户业务类型
+#define API_UPDATA_PASSWORD @"http://119.29.97.207:8056/api/modifyPassword"
+
+/// 获取订单详情
+#define API_GET_ORDER_DETAIL @"http://119.29.97.207:8056/api/GetOrderDetail"
+
+/// 获取热销产品
+#define API_GET_HOT_SELL_PRODUCT @"http://119.29.97.207:8056/api/GetProductList"
+
+/// 获取订单物流信息
+#define API_GET_ORDER_TMSLIST @"http://119.29.97.207:8056/api/GetOrderTmsList"
+
+/// 获取物流信息详情
+#define API_GET_ORDER_TMS_INFORMATION @"http://119.29.97.207:8056/api/GetOrderTmsInfo"
+
+/// 获取客户列表
+#define API_GET_PARTY_LIST @"http://119.29.97.207:8056/api/GetPartyList"
+
+/// 获取客户地址列表
+#define API_GET_ADDRESS @"http://119.29.97.207:8056/api/GetAddress"
+
+/// 获取付款方式 post strLicense  过来就行了
+#define API_GET_PAYMENT_TYPE @"http://119.29.97.207:8056/api/GetPaymentType"
+
+/// 获取产品品牌和分类列表
+#define API_GET_PRODUCT_TYPE @"http://119.29.97.207:8056/api/GetProductType"
+
+/// 根据品牌分类信息获取产品列表
+#define API_GET_PRDUCT_LIST_TYPE @"http://119.29.97.207:8056/api/GetProductListType"
+
+/// 获取电子签名和交货现场图片
+#define API_GETAUTOGRAPH @"http://119.29.97.207:8056/api/GetAutograph"
+
+/// 服务端存放电子签名的图片文件夹
+#define API_SERVER_AUTOGRAPH_AND_PICTURE_FILE @"http://119.29.97.207:8056/Uploadfile"
+
+/// 获取订单位置信息
+#define API_GET_LOCATION @"http://119.29.97.207:8056/api/GetLocaltion"
+
+/// 获取客户报表
+#define API_GET_CUSTOMER_CHART_DATA @"http://119.29.97.207:8056/api/CustomerCount"
+
+/// 获取产品报表
+#define API_GET_PRODUCT_CHART_DATA @"http://119.29.97.207:8056/api/ProductCount"
+
+/// 获取产品报表
+#define API_GET_SUBMIT_ORDER @"http://119.29.97.207:8056/api/SubmitOrder1"
+
+/// 获取赠品品类详细信息
+#define API_GET_COMMODITY_DATA @"http://119.29.97.207:8056/api/GetProductListType"
+
+/// 最终提交订单
+#define API_CONFIRM_ORDER @"http://119.29.97.207:8056/api/ConfirmOrder"
+
+/// 获取赠品品类详细信息
+#define API_GET_COMMODITY_DATA @"http://119.29.97.207:8056/api/GetProductListType"
+
+/// 审核通过
+#define API_UpdateAudit @"http://119.29.97.207:8056/api/UpdateAudit"
+
+/// 审核不通过
+#define API_RuturnAudit @"http://119.29.97.207:8056/api/RuturnAudit"
+
+/// 最新资讯
+#define API_GetAppNews @"http://119.29.97.207:8056/api/GetAppNews"
+
+
+/*--------- 判断iOS版本 ---------*/
+#define SystemVersion [[UIDevice currentDevice] systemVersion].floatValue
+
+/*--------- 屏幕尺寸 ---------*/
+#define ScreenHeight [UIScreen mainScreen] .bounds.size.height
+#define ScreenWidth [UIScreen mainScreen] .bounds.size.width
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsDetailViewController">
+            <connections>
+                <outlet property="ContentLabel" destination="nfZ-I2-VQu" id="VSo-xZ-eRv"/>
+                <outlet property="DateLabel" destination="mv0-Il-24t" id="ahL-Io-HoI"/>
+                <outlet property="DateLabelHeight" destination="9y4-6R-qWT" id="CU2-RL-KSx"/>
+                <outlet property="DateLabelTop" destination="zAL-Zz-ezy" id="GRi-dN-EOj"/>
+                <outlet property="ScrollContentView" destination="00z-0t-sDi" id="iGi-z3-aCg"/>
+                <outlet property="TitleLabel" destination="vx7-1R-avG" id="ekz-Pl-41d"/>
+                <outlet property="TitleLabelHeight" destination="H06-th-ASf" id="9eU-9H-DZs"/>
+                <outlet property="scrollContentViewHeight" destination="nfk-Q5-JYu" id="zIU-c0-FXH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egU-Xm-uxq">
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00z-0t-sDi">
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx7-1R-avG">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="49" id="H06-th-ASf"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfZ-I2-VQu">
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mv0-Il-24t">
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="9y4-6R-qWT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="mv0-Il-24t" secondAttribute="trailing" constant="20" id="4q2-vY-pMj"/>
+                                <constraint firstItem="mv0-Il-24t" firstAttribute="leading" secondItem="00z-0t-sDi" secondAttribute="leading" id="8OI-rO-ZWg"/>
+                                <constraint firstItem="vx7-1R-avG" firstAttribute="top" secondItem="00z-0t-sDi" secondAttribute="top" id="Naz-7b-ZR5"/>
+                                <constraint firstItem="vx7-1R-avG" firstAttribute="leading" secondItem="00z-0t-sDi" secondAttribute="leading" id="hJZ-mm-wwJ"/>
+                                <constraint firstAttribute="trailing" secondItem="nfZ-I2-VQu" secondAttribute="trailing" id="jQR-rG-W41"/>
+                                <constraint firstItem="nfZ-I2-VQu" firstAttribute="leading" secondItem="00z-0t-sDi" secondAttribute="leading" id="lzS-ZA-rF3"/>
+                                <constraint firstAttribute="height" constant="600" id="nfk-Q5-JYu"/>
+                                <constraint firstAttribute="bottom" secondItem="mv0-Il-24t" secondAttribute="bottom" id="q3w-9f-WeF"/>
+                                <constraint firstItem="nfZ-I2-VQu" firstAttribute="top" secondItem="vx7-1R-avG" secondAttribute="bottom" id="wbB-P6-9uN"/>
+                                <constraint firstAttribute="trailing" secondItem="vx7-1R-avG" secondAttribute="trailing" id="z9K-HO-v92"/>
+                                <constraint firstItem="mv0-Il-24t" firstAttribute="top" secondItem="nfZ-I2-VQu" secondAttribute="bottom" constant="30" id="zAL-Zz-ezy"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="00z-0t-sDi" firstAttribute="top" secondItem="egU-Xm-uxq" secondAttribute="top" id="3Sa-F5-1aN"/>
+                        <constraint firstAttribute="trailing" secondItem="00z-0t-sDi" secondAttribute="trailing" constant="15" id="hap-ZS-JaY"/>
+                        <constraint firstItem="00z-0t-sDi" firstAttribute="centerX" secondItem="egU-Xm-uxq" secondAttribute="centerX" id="jOY-bO-Joc"/>
+                        <constraint firstItem="00z-0t-sDi" firstAttribute="leading" secondItem="egU-Xm-uxq" secondAttribute="leading" constant="15" id="vbY-XD-OOH"/>
+                        <constraint firstAttribute="bottom" secondItem="00z-0t-sDi" secondAttribute="bottom" id="yE0-7q-yUp"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="egU-Xm-uxq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3cH-fm-sRC"/>
+                <constraint firstAttribute="bottom" secondItem="egU-Xm-uxq" secondAttribute="bottom" id="KvK-ei-uGz"/>
+                <constraint firstItem="egU-Xm-uxq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="b0P-Lu-Gyq"/>
+                <constraint firstAttribute="trailing" secondItem="egU-Xm-uxq" secondAttribute="trailing" id="pDd-6b-fmR"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="148.5"/>
+        </view>
+    </objects>
+</document>
